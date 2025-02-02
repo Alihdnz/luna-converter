@@ -55,7 +55,7 @@ async def delete_all_files(session_id: str):
     return JSONResponse(content={"message": "Todos os arquivos foram removidos!"})
 
 async def convert_image(file_data):
-    return await asyncio.to_thread(process_time, file_data) # type: ignore
+    return await asyncio.to_thread(process_image, file_data) 
 
 
 def process_image(file_data):
