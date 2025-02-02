@@ -27,7 +27,7 @@ export default function FileUploader() {
     await uploadFiles(selectedFiles); 
   };
 
-  const apiUrl = process.env.API_URL || "http://localhost:8000";
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   
   const uploadFiles = async (files: File[]) => {
     setIsUploading(true); 
